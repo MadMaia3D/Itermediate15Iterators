@@ -1,5 +1,6 @@
 #include "MySexyVector.h"
 #include <assert.h>
+#include <iostream>
 
 MySexyVector::~MySexyVector()
 {
