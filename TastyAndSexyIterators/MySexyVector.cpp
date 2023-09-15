@@ -27,6 +27,16 @@ int MySexyVector::size() const
 	return currentSize;
 }
 
+void MySexyVector::reserve(int new_cap)
+{
+	std::cout << "\nTrying to reallocate" << std::endl;
+	if (new_cap <= currentCapacity) {
+		std::cout << "Reallocation not completed" << std::endl;
+		return;
+	}
+	reallocate(new_cap);
+}
+
 int MySexyVector::capacity() const
 {
 	return currentCapacity;

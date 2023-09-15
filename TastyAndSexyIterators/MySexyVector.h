@@ -8,7 +8,7 @@ public:
 	// capacity
 	bool empty() const;
 	int size() const;
-	void reserve(int i);
+	void reserve(int new_cap);
 	int capacity() const;
 	void shrink_to_fit();
 	//modifiers
