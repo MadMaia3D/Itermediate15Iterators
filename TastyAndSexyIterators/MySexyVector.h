@@ -18,6 +18,8 @@ public:
 	void resize(int count);
 
 private:
+	void reallocate(int new_cap);
+private:
 	int* container = nullptr;
 	int currentSize = 0;
 	int currentCapacity = 0;

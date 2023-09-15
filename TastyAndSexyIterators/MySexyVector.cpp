@@ -53,3 +53,19 @@ void MySexyVector::push_back(int value)
 	container[currentSize] = value;
 	currentSize++;
 }
+
+void MySexyVector::reallocate(int new_cap)
+{
+	std::cout << "Reallocation Started" << std::endl;
+	assert(new_cap >= 0);
+	int* newContainer = new int[new_cap];
+	for (int i = 0; (i < currentCapacity) && (i < new_cap); i++) {
+		newContainer[i] = container[i];
+	}
+	delete[] container;
+	container = newContainer;
+	currentCapacity = new_cap;
+
+	std::cout << "Reallocation Complete" << std::endl;
+	std::cout << "New Size: " << size() << "\tNew Capacity: " << capacity() << "\n" << std::endl;
+}
