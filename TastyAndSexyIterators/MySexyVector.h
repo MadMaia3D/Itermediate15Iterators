@@ -14,7 +14,7 @@ public:
 	//modifiers
 	void clear();
 	void push_back(int value);
-	int pop_back();
+	void pop_back();
 	void resize(int count);
 
 private:

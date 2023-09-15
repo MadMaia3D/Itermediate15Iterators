@@ -65,6 +65,12 @@ void MySexyVector::push_back(int value)
 	currentSize++;
 }
 
+void MySexyVector::pop_back()
+{
+	assert(currentSize > 0);
+	currentSize -= 1;
+}
+
 void MySexyVector::reallocate(int new_cap)
 {
 	std::cout << "Reallocation Started" << std::endl;
