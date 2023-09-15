@@ -42,6 +42,11 @@ int MySexyVector::capacity() const
 	return currentCapacity;
 }
 
+void MySexyVector::shrink_to_fit()
+{
+	reallocate(currentSize);
+}
+
 void MySexyVector::push_back(int value)
 {
 	if (currentCapacity == 0) {
