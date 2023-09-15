@@ -1,4 +1,5 @@
 #include "MySexyVector.h"
+#include <assert.h>
 
 MySexyVector::~MySexyVector()
 {
@@ -10,8 +11,7 @@ MySexyVector::~MySexyVector()
 
 int MySexyVector::operator[](int pos) const
 {
-	assert(pos > 0);
-	assert(pos <= currentSize);
+	assert(pos < currentSize);
 	return container[pos];
 }
 
