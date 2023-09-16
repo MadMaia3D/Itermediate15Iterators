@@ -1,8 +1,5 @@
 #include "MySexyVector.h"
 #include <assert.h>
-#include <iostream>
-
-
 
 MySexyVector::MySexyVector(const MySexyVector & source)
 {
@@ -60,9 +57,7 @@ int MySexyVector::size() const
 
 void MySexyVector::reserve(int new_cap)
 {
-	std::cout << "\nTrying to reallocate" << std::endl;
 	if (new_cap <= currentCapacity) {
-		std::cout << "Reallocation not completed" << std::endl;
 		return;
 	}
 	reallocate(new_cap);
@@ -91,7 +86,6 @@ void MySexyVector::push_back(int value)
 	else if (currentSize == currentCapacity) {
 		reallocate(currentCapacity * 2);
 	}
-	std::cout << "Pushing back " << value << std::endl;
 	container[currentSize] = value;
 	currentSize++;
 }
@@ -104,7 +98,6 @@ void MySexyVector::pop_back()
 
 void MySexyVector::reallocate(int new_cap)
 {
-	std::cout << "Reallocation Started" << std::endl;
 	assert(new_cap >= 0);
 	int* newContainer = new int[new_cap];
 	for (int i = 0; (i < currentCapacity) && (i < new_cap); i++) {
@@ -113,7 +106,4 @@ void MySexyVector::reallocate(int new_cap)
 	delete[] container;
 	container = newContainer;
 	currentCapacity = new_cap;
-
-	std::cout << "Reallocation Complete" << std::endl;
-	std::cout << "New Size: " << size() << "\tNew Capacity: " << capacity() << "\n" << std::endl;
 }
