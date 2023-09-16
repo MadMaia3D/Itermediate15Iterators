@@ -34,7 +34,13 @@ MySexyVector::~MySexyVector()
 
 // operators
 
-int MySexyVector::operator[](int pos) const
+int& MySexyVector::operator[](int pos)
+{
+	assert(pos < currentSize);
+	return container[pos];
+}
+
+const int MySexyVector::operator[](int pos) const
 {
 	assert(pos < currentSize);
 	return container[pos];

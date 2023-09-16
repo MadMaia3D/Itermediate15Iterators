@@ -7,7 +7,8 @@ public:
 	MySexyVector& operator=(const MySexyVector& source);
 	~MySexyVector();
 	// operators
-	int operator[](int pos) const;
+	int& operator[](int pos);
+	const int operator[](int pos) const;
 	// capacity
 	bool empty() const;
 	int size() const;
