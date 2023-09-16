@@ -22,6 +22,7 @@
     <ProjectGuid>{2840CD82-7E09-4FF6-9A5C-33D7CFCA95C1}</ProjectGuid>
     <RootNamespace>TastyAndSexyIterators</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>TastyAndSexyContainers</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
