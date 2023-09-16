@@ -2,6 +2,9 @@
 
 class MySexyVector {
 public:
+	MySexyVector() = default;
+	MySexyVector(const MySexyVector& source);
+	MySexyVector& operator=(const MySexyVector& source);
 	~MySexyVector();
 	// operators
 	int operator[](int pos) const;

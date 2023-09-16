@@ -2,6 +2,30 @@
 #include <assert.h>
 #include <iostream>
 
+
+
+MySexyVector::MySexyVector(const MySexyVector & source)
+{
+	*this = source;
+}
+
+MySexyVector & MySexyVector::operator=(const MySexyVector & source)
+{
+	delete[] container;
+
+	currentCapacity = source.currentCapacity;
+	currentSize = source.currentSize;
+
+	if (currentCapacity > 0) {
+		container = new int[currentCapacity];
+
+		for (int i = 0; i < currentSize; i++) {
+			container[i] = source[i];
+		}
+	}	
+	return *this;
+}
+
 MySexyVector::~MySexyVector()
 {
 	delete[] container;
